@@ -10,7 +10,6 @@ import PeopleIcon from '@mui/icons-material/People';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import EventIcon from '@mui/icons-material/Event';
 import PagesIcon from '@mui/icons-material/Pages';
-import { Shortcut } from '@mui/icons-material';
 
 
 const useStyles = makeStyles ({
@@ -32,21 +31,17 @@ export default function SideMenu() {
     
     <ButtonGroup orientation="vertical" >
             <img src={fbIcon} alt="fbIcon" className={classes.imgStyle} />
-            <Typography variant="subtitle1" gutterBottom component="div" sx={{color: "#4d4c4c"}} className={classes.menuTextStyle}>
-            Menu
-            </Typography>
-           <Button variant="text" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<ArticleIcon/>}>News</Button>
-           <Button variant="text" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<MessageIcon />}>Messages</Button>
-           <Button variant="text" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<PeopleIcon/>}>Friends</Button>
-           <Button variant="text" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<SupervisedUserCircleIcon/>}>Communities</Button>
-           <Button variant="text" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<EventIcon/>}>Events</Button>
-           <Button variant="text" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<PagesIcon />}>Pages</Button>
-           <Typography variant="subtitle1" gutterBottom component="div" sx={{color: "#4d4c4c"}} className={classes.shortcutTextStyle}>
-            Shortcuts
-            </Typography>
-            <Button variant="text" sx={{color: "gray", justifyContent:'flex-start'}}>Pages</Button>
-            <Button variant="text" sx={{color: "gray", justifyContent:'flex-start'}}>Pages</Button>
-            <Button variant="text" sx={{color: "gray", justifyContent:'flex-start'}}>Pages</Button>
+           <Button variant="text" disableRipple={true} sx={{color: "black", justifyContent:'flex-start'}}>Menu</Button>
+           <Button variant="string" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<ArticleIcon/>}>News</Button>
+           <Button variant="string" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<MessageIcon />}>Messages</Button>
+           <Button variant="string" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<PeopleIcon/>}>Friends</Button>
+           <Button variant="string" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<SupervisedUserCircleIcon/>}>Communities</Button>
+           <Button variant="string" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<EventIcon/>}>Events</Button>
+           <Button variant="string" sx={{color: "gray", justifyContent:'flex-start'}} startIcon={<PagesIcon />}>Pages</Button>
+           <Button variant="text" sx={{color: "black", justifyContent:'flex-start'}}>Stories</Button>
+            <Button variant="string" sx={{color: "gray", justifyContent:'flex-start'}}>Pages</Button>
+            <Button variant="string" sx={{color: "gray", justifyContent:'flex-start'}}>Pages</Button>
+            <Button variant="string" sx={{color: "gray", justifyContent:'flex-start'}}>Pages</Button>
     </ButtonGroup>
   );
 }

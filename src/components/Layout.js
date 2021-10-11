@@ -2,13 +2,13 @@ import * as React from 'react';
 import { makeStyles } from '@mui/styles';
 import Grid from "@mui/material/Grid";
 import SideMenu from './SideMenu';
-import Typography from '@mui/material/Typography';
 import Posts from './Posts/Posts';
+import PostStory from './Posts/PostStory';
 
 
 const useStyles = makeStyles({
     sideBar: {
-      background: '#f7f7f7',
+      background: '#eeeced',
       border: 0,
       borderRadius: 3,
       color: 'black',
@@ -21,15 +21,16 @@ const useStyles = makeStyles({
       minWidth: '300px',
     },
     mainMenu:{
-      background: '#ffffff',
+      background: '#f9f7fb',
       border: 0,
       borderRadius: 3,
-      boxShadow: '0 0px 30px 0px lightgray',
+      boxShadow: '0 0px 10px 1px lightgray',
       color: 'black',
       height: '100vh',
       overflow: 'scroll',
       overflowX: 'hidden',
       justifyContent: 'center',
+      paddingTop: '50px',
     },
   });
 
@@ -44,7 +45,7 @@ const classes = useStyles();
       
 
       <Grid item xs={10} className={classes.mainMenu}>
-           
+       <PostStory />
        <Posts />
        <Posts />
        <Posts />
