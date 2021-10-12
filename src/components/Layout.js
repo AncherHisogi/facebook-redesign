@@ -2,9 +2,8 @@ import * as React from 'react';
 import { makeStyles } from '@mui/styles';
 import Grid from "@mui/material/Grid";
 import SideMenu from './SideMenu';
-import Posts from './Posts/Posts';
-import PostStory from './Posts/PostStory';
-
+import TabBar from '../components/Tabs/TabBar'
+import './Layout.css';
 
 const useStyles = makeStyles({
     sideBar: {
@@ -23,14 +22,15 @@ const useStyles = makeStyles({
     mainMenu:{
       background: '#f9f7fb',
       border: 0,
-      borderRadius: 3,
-      boxShadow: '0 0px 10px 1px lightgray',
+      borderRadius: 0,
+      boxShadow: '10 10px 1px 10px #eeecf0',
       color: 'black',
       height: '100vh',
       overflow: 'scroll',
       overflowX: 'hidden',
       justifyContent: 'center',
       paddingTop: '50px',
+      paddingLeft: '50px',
     },
   });
 
@@ -45,21 +45,9 @@ const classes = useStyles();
       
 
       <Grid item xs={10} className={classes.mainMenu}>
-       <PostStory />
-       <Posts />
-       <Posts />
-       <Posts />
-       <Posts />
-       <Posts />
-       <Posts />
-       <Posts />
-       <Posts />
-       <Posts />
-       <Posts />
-       <Posts />
-       <Posts />
-       <Posts />
+       <TabBar />
       </Grid>
+
     </Grid>
   );
 }
