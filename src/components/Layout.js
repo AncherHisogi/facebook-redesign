@@ -23,7 +23,7 @@ const useStyles = makeStyles({
       background: '#f9f7fb',
       border: 0,
       borderRadius: 0,
-      boxShadow: '10 10px 1px 10px #eeecf0',
+      boxShadow: '0 0px 10px 10px #dcdcdc',
       color: 'black',
       height: '100vh',
       overflow: 'scroll',
