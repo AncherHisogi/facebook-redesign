@@ -62,6 +62,9 @@ export default function SocialEvents() {
           Friend Requests
       </Typography>
       <FriendRequests />
+      <FriendRequests />
+      <FriendRequests />
+      <FriendRequests />
       
       <CardActions disableSpacing>
         
