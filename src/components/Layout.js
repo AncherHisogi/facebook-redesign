@@ -1,7 +1,5 @@
 import * as React from "react";
 import { makeStyles } from "@mui/styles";
-import Grid from "@mui/material/Grid";
-import SideMenu from "./SideMenu";
 import TabBar from "../components/Tabs/TabBar";
 import "./Layout.css";
 import PropTypes from "prop-types";
@@ -10,7 +8,12 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import fbIcon from './fb_icon2.png';
-import { minHeight, minWidth } from "@mui/system";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import SupervisedUserCircleOutlinedIcon from '@mui/icons-material/SupervisedUserCircleOutlined';
+import PagesOutlinedIcon from '@mui/icons-material/PagesOutlined';
 
 const useStyles = makeStyles({
   sideBar: {
@@ -20,11 +23,10 @@ const useStyles = makeStyles({
     color: "black",
     height: "100vh",
     minHeight: "500px",
-    display: "flex",
-    alignItems: "flex-start",
-    justifyContent: "center",
+    // display: "flex",
     paddingTop: "30px",
     minWidth: "300px",
+    overflow: 'hidden',
   },
   mainMenu: {
     background: "#f9f7fb",
@@ -42,9 +44,12 @@ const useStyles = makeStyles({
   imageStyle:{
     width: '70px',
     height: '70px',
-    paddingBottom: '30px'
+    paddingLeft: '37px',
+    paddingBottom: '50px',
   }
 });
+
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -58,7 +63,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 0 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -86,15 +91,26 @@ function Layout() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const theme = createTheme({
+    components: {
+      MuiTab: {
+        styleOverrides: {
+          root: {
+            flexDirection: 'row',
+            paddingLeft: '50px',
+            fontSize: "0.8em",
+            justifyItems: 'start',
+            justifyContent: 'start',
+          },
+        },
+      },
+    },
+  });
+
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        bgcolor: "background.paper",
-        display: "flex",
-        height: 424,
-      }}
-    >
+    <Box sx={{display: "flex", overflow:'hidden', height: '100vh'}}>
+     
       <Tabs
         orientation="vertical"
         variant='fullWidth'
@@ -103,21 +119,22 @@ function Layout() {
         aria-label="Vertical tabs example"
         className={classes.sideBar}
       >
-        <img src={fbIcon} alt="fbIcon" className={classes.imageStyle} />
-        <Tab label="Item One" {...a11yProps(0)} />
-        <Tab label="Item Two" {...a11yProps(1)} />
-        <Tab label="Item Three" {...a11yProps(2)} />
-        <Tab label="Item Four" {...a11yProps(3)} />
-        <Tab label="Item Five" {...a11yProps(4)} />
-        <Tab label="Item Six" {...a11yProps(5)} />
-        <Tab label="Item Seven" {...a11yProps(6)} />
+        <img src={fbIcon} alt="fbIcon" className={classes.imageStyle} value='false'/>
+        <Tab label="News" {...a11yProps(0)} theme={theme} icon={<ArticleOutlinedIcon/>}/>
+        <Tab label="Messages" {...a11yProps(1)} theme={theme} icon={<ForumOutlinedIcon />}/>
+        <Tab label="Friends" {...a11yProps(2)}theme={theme} icon={<PeopleAltOutlinedIcon />}/>
+        <Tab label="Communities" {...a11yProps(3)} theme={theme} icon={<SupervisedUserCircleOutlinedIcon />}/>
+        <Tab label="Events" {...a11yProps(4)} theme={theme} icon={<PagesOutlinedIcon />}/>
       </Tabs>
+        <TabPanel value={value} index={0} className={classes.mainMenu}  >
+        <TabBar></TabBar>
+      </TabPanel>
       <TabPanel value={value} index={1} className={classes.mainMenu}>
         <TabBar></TabBar>
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Two
-      </TabPanel>
+      </TabPanel> 
       <TabPanel value={value} index={2}>
         Item Three
       </TabPanel>
@@ -127,41 +144,9 @@ function Layout() {
       <TabPanel value={value} index={4}>
         Item Five
       </TabPanel>
-      <TabPanel value={value} index={5}>
-        Item Six
-      </TabPanel>
-      <TabPanel value={value} index={6}>
-        Item Seven
-      </TabPanel>
     </Box>
   );
 }
-// <Grid container spacing={0}>
-//   <Grid item xs={2} className={classes.sideBar}>
-//       <Box sx={{ width: '100%' }}>
-//       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-//         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" orientation="vertical">
-//           <Tab label="Item One" {...a11yProps(0)} />
-//           <Tab label="Item Two" {...a11yProps(1)} />
-//           <Tab label="Item Three" {...a11yProps(2)} />
-//         </Tabs>
-//       </Box>
-//       <TabPanel value={value} index={0}>
-//         Item One
-//       </TabPanel>
-//       <TabPanel value={value} index={1}>
-//         Item Two
-//       </TabPanel>
-//       <TabPanel value={value} index={2}>
-//         Item Three
-//       </TabPanel>
-//     </Box>
-//   </Grid>
 
-//   <Grid item xs={10} className={classes.mainMenu}>
-//    <TabBar />
-//   </Grid>
-
-// </Grid>
 
 export default Layout;
