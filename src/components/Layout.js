@@ -14,6 +14,7 @@ import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import SupervisedUserCircleOutlinedIcon from '@mui/icons-material/SupervisedUserCircleOutlined';
 import PagesOutlinedIcon from '@mui/icons-material/PagesOutlined';
+import FriendsLayout from "./Friends/FriendsLayout";
 
 const useStyles = makeStyles({
   sideBar: {
@@ -40,6 +41,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     paddingTop: "50px",
     paddingLeft: "50px",
+    
   },
   imageStyle:{
     width: '70px',
@@ -133,15 +135,15 @@ function Layout() {
         <TabBar></TabBar>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Two
+       item two
       </TabPanel> 
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        Item Four
+      <TabPanel value={value} index={3} className={classes.mainMenu}>
+      <FriendsLayout />
       </TabPanel>
       <TabPanel value={value} index={4}>
+        Item Four
+      </TabPanel>
+      <TabPanel value={value} index={5}>
         Item Five
       </TabPanel>
     </Box>
