@@ -15,6 +15,7 @@ import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import SupervisedUserCircleOutlinedIcon from '@mui/icons-material/SupervisedUserCircleOutlined';
 import PagesOutlinedIcon from '@mui/icons-material/PagesOutlined';
 import FriendsLayout from "./Friends/FriendsLayout";
+import MusicPlayer from './MusicPlayer/MusicPlayer';
 
 const useStyles = makeStyles({
   sideBar: {
@@ -41,7 +42,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     paddingTop: "50px",
     paddingLeft: "50px",
-    
+    width: "100%"
   },
   imageStyle:{
     width: '70px',
@@ -138,7 +139,7 @@ function Layout() {
        item two
       </TabPanel> 
       <TabPanel value={value} index={3} className={classes.mainMenu}>
-      <FriendsLayout />
+        <FriendsLayout />
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item Four
@@ -146,6 +147,8 @@ function Layout() {
       <TabPanel value={value} index={5}>
         Item Five
       </TabPanel>
+
+      <MusicPlayer />
     </Box>
   );
 }
