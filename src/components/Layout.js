@@ -15,7 +15,7 @@ import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import SupervisedUserCircleOutlinedIcon from '@mui/icons-material/SupervisedUserCircleOutlined';
 import PagesOutlinedIcon from '@mui/icons-material/PagesOutlined';
 import FriendsLayout from "./Friends/FriendsLayout";
-import MusicPlayer from './MusicPlayer/MusicPlayer';
+import BottomMenu from "./BottomMenu/BottomMenu";
 
 const useStyles = makeStyles({
   sideBar: {
@@ -148,7 +148,7 @@ function Layout() {
         Item Five
       </TabPanel>
 
-      <MusicPlayer />
+      <BottomMenu />
     </Box>
   );
 }
