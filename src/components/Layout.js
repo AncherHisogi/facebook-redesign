@@ -8,7 +8,6 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import fbIcon from './fb_icon2.png';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';

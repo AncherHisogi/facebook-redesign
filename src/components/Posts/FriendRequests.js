@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
@@ -28,7 +27,7 @@ export default function FriendRequest() {
         <Grid item xs={6}>
                     <Stack spacing={0}>
                     <Typography variant="body1" color="text.primary" sx={{paddingTop: 0}}>
-                        Nametest  Secondnametest
+                        Nametest  Secondna
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{paddingTop: 0}}>
                         Google inc.
