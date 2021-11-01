@@ -28,7 +28,7 @@ export default function FriendRequest() {
         <Grid item xs={6}>
                     <Stack spacing={0}>
                     <Typography variant="body1" color="text.primary" sx={{paddingTop: 0}}>
-                        Nametest  Secondnametest
+                        Nametest  Secondna
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{paddingTop: 0}}>
                         Google inc.
