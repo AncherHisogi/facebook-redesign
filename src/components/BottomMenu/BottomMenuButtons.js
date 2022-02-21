@@ -22,7 +22,7 @@ const useStyles = makeStyles({
   },
   boxTheme: {
     display: 'flex',
-    justifyContent:'flex-start',
+    justifyContent:'center',
     alignItems:'center',
     paddingRight: '50px',
     height: '70px',

@@ -9,12 +9,11 @@ import BottomMenuButtons from '../BottomMenu/BottomMenuButtons'
 
 const useStyles = makeStyles({
     cardStyle:{
-        opacity: 0.95,
         zIndex: 1,
         position: 'absolute',
         bottom: 0,
         width: "100%",
-        height: '70px',
+        height: '50px',
         overflow: 'hidden',
         display: 'flex',
         justifyContent: 'center',
