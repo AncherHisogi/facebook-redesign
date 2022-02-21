@@ -1,5 +1,6 @@
 import * as React from "react";
 import { makeStyles } from "@mui/styles";
+import { createTheme } from "@mui/material/styles";
 import TabBar from "../components/Tabs/TabBar";
 import "./Layout.css";
 import PropTypes from "prop-types";
@@ -15,6 +16,7 @@ import SupervisedUserCircleOutlinedIcon from '@mui/icons-material/SupervisedUser
 import PagesOutlinedIcon from '@mui/icons-material/PagesOutlined';
 import FriendsLayout from "./Friends/FriendsLayout";
 import BottomMenu from "./BottomMenu/BottomMenu";
+import ChatLayout from "./Chat/ChatLayout";
 
 const useStyles = makeStyles({
   sideBar: {
@@ -24,7 +26,6 @@ const useStyles = makeStyles({
     color: "black",
     height: "100vh",
     minHeight: "500px",
-    // display: "flex",
     paddingTop: "30px",
     minWidth: "300px",
     overflow: 'hidden',
@@ -135,7 +136,7 @@ function Layout() {
         <TabBar></TabBar>
       </TabPanel>
       <TabPanel value={value} index={2}>
-       item two
+        <ChatLayout />
       </TabPanel> 
       <TabPanel value={value} index={3} className={classes.mainMenu}>
         <FriendsLayout />

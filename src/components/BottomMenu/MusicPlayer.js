@@ -15,7 +15,6 @@ const useStyles = makeStyles({
   customTheme: { 
       '&.MuiIconButton-colorInherit':{
         color:'white',
-        opacity: 0.5,
       },
       '&.MuiLinearProgress-determinate':{
         color:'white'
@@ -69,7 +68,7 @@ export default function MusicPlayer() {
             <Typography variant="body2" sx={{paddingTop: 0, color: "white", opacity: 0.5,}}>
               Eminem
             </Typography>
-         <LinearProgress variant="determinate" value={progress} sx={{width:'300px'}} color='inherit' className={classes.customTheme}/>
+         <LinearProgress variant="determinate" value={progress} sx={{width:'200px', opacity: 0.5}} color='inherit' className={classes.customTheme}/>
          </Stack>
          <IconButton aria-label="volume-up"  color='inherit' className={classes.customTheme}>
            <VolumeUpIcon sx={{ height: 28, width: 28 }} />
