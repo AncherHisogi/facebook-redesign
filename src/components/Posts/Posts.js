@@ -14,12 +14,12 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import IconButton from '@mui/material/IconButton';
 
-var imageUrl;
+var imageUrl = ['https://picsum.photos/1920/700'] 
 
 export default class Posts extends React.Component {
-   
+
   componentDidMount(){
-    imageUrl = ['https://picsum.photos/1920/700']   
+     
   }
   render (){
     return (
