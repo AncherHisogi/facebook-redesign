@@ -31,16 +31,15 @@ export default function ChatLayout()
 
       <Grid container spacing={1} direction='row'>
         <Grid item xs={8} className={classes.mainChat} >
-          Main chat windowasdfasdfadsfasddsfaafdafdafdadfadsfasdfasdfasdfdfasdfadfaaafdsfdsdsafdfadsfaddasfasddfasfasdfasdfafadsafdsasfasdfasfsaddsfafdafdafdsfadsfadsdsg23432423423432432
+          
         </Grid>
         <Grid item xs={4}>
-        Friends chat
+       
             
           
         </Grid>
         <Grid item xs={8}>
-          Text bar
-          
+         
         </Grid>
       </Grid>
     </Box>
