@@ -8,7 +8,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import fbIcon from './fb_icon4.png';
+import fbIcon from './fb_icon2.png';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
@@ -49,6 +49,7 @@ const useStyles = makeStyles({
     height: '70px',
     paddingLeft: '37px',
     paddingBottom: '50px',
+    imageRendering: '-webkit-optimize-contrast',
   }
 });
 
