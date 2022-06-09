@@ -23,7 +23,10 @@ export default class Posts extends React.Component {
   }
   render (){
     return (
-          <Card sx={{ maxHeight: 645, marginTop: 5, boxShadow: '0 5px 3px 0px #eeedf0',}}>
+          <Card sx={{ maxHeight: 645, marginTop: 5, 
+            //boxShadow: 'inset 0 0 2000px rgba(255, 255, 255, .5)',
+            backgroundColor: 'rgba(255, 255, 255, .50)',
+            backdropFilter: 'blur(5px)'}}>
             <CardHeader
               avatar={
                 <Avatar sx={{ bgcolor: indigo[500] }} aria-label="recipe">

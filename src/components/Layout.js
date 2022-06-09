@@ -31,7 +31,10 @@ const useStyles = makeStyles({
     overflow: 'hidden',
   },
   mainMenu: {
-    background: "#f9f7fb",
+    
+    //backgroundImage: "url(https://www.ijunkie.com/wp-content/uploads/2020/08/recreate-macos-big-sur.jpeg)",
+    background: 'url(https://wallpapercave.com/wp/wp8149239.jpg) no-repeat center center fixed',
+    backgroundSize: 'cover',
     border: 0,
     borderRadius: 0,
     boxShadow: "0 0px 10px 10px #dcdcdc",

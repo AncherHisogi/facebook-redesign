@@ -46,8 +46,8 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
 
 export default function QuickStories() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={0} justifyContent="center">
+    <Box sx={{ flexGrow: 1, marginRight: "30px", }}>
+      <Grid container spacing={5} justifyContent="center">
         <Grid item xs={2}>
             <StyledBadge
             overlap="circular"
