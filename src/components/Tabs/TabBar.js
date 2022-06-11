@@ -51,7 +51,8 @@ export default function BasicTabs() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider',  backgroundColor: 'rgba(255, 255, 255, .50)',
+            backdropFilter: 'blur(5px)'}}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Posts" {...a11yProps(0)} />
           <Tab label="Photos" {...a11yProps(1)} />

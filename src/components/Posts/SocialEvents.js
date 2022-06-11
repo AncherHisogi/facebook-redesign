@@ -40,7 +40,8 @@ export default function SocialEvents() {
   };
 
   return (
-    <Card sx={{ boxShadow: '0 5px 3px 0px #eeedf0',  margin: 5, padding: 2}}>
+    <Card sx={{  margin: 5, padding: 2,  backgroundColor: 'rgba(255, 255, 255, .50)',
+    backdropFilter: 'blur(5px)'}}>
       <Typography variant="subtitle1" color="text.primary">
           Stories
       </Typography>

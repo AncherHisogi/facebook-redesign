@@ -9,7 +9,8 @@ export default function PostStory(){
     return(
               <Paper
                 component="form"
-                sx={{ display: 'flex', alignItems: 'center', marginTop: 5, boxShadow: '0 5px 3px 0px #eeedf0' }}
+                sx={{ display: 'flex', alignItems: 'center', marginTop: 5, backgroundColor: 'rgba(255, 255, 255, .50)',
+                backdropFilter: 'blur(5px)' }}
               >
                 <InputBase
                   sx={{ ml: 1, flex: 1 }}
