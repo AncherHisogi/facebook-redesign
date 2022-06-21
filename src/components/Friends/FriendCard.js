@@ -17,7 +17,8 @@ const imgUrl = ['https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl
 
   export default function FriendCard() {
     return (
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345, backgroundColor: 'rgba(255, 255, 255, .50)',
+      backdropFilter: 'blur(5px)'}}>
         <CardMedia
           component="img"
           height="140"
