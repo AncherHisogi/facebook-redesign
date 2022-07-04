@@ -21,7 +21,9 @@ export default class GetStories extends React.Component {
     );
 
     return (
-      <Avatar alt="test1" sx={{ width: 40, height: 40 }} src={picUrl}> </Avatar>
+      <Avatar src={picUrl} />
     );
+  
+
   }
 }
