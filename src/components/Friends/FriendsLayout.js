@@ -52,7 +52,7 @@ export default function FriendsLayout() {
             backdropFilter: 'blur(5px)'}}>
         <Tabs
           value={value}
-          onChange={handleChange}
+          onChange={handleChange}npm
           aria-label="basic tabs example"
         >
           <Tab label="Allfriends" {...a11yProps(0)} />
