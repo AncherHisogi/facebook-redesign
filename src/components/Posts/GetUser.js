@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Avatar from "@mui/material/Avatar";
 
 export default class GetStories extends React.Component {
@@ -15,8 +15,8 @@ export default class GetStories extends React.Component {
   }
 
   render() {
-    var picUrl;
-    const persons = this.state.person.map(
+    
+    var picUrl = this.state.person.map(
       (item, i) => (picUrl = item.picture.thumbnail)
     );
 
