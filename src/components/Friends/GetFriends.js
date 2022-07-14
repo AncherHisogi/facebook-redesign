@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -29,18 +29,18 @@ export default class GetStories extends React.Component {
   }
 
   render() {
-    var picUrl;
-    const persons = this.state.avatar.map(
+    
+    var picUrl = this.state.avatar.map(
       (item, i) => (picUrl = item.picture.large)
     );
 
-    var userFirstName;
-    const persons2 = this.state.personName.map(
+    
+    var userFirstName = this.state.personName.map(
       (item, i) => (userFirstName = item.name.first + " " + item.name.last)
     );
 
-    var userCity;
-    const persons3 = this.state.personCity.map(
+   
+    var userCity = this.state.personCity.map(
       (item, i) => (userCity = item.location.city)
     );
 
