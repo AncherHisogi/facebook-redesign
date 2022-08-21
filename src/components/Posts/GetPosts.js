@@ -1,3 +1,15 @@
-//make a function to grab random posts from api
-//then generate a post to export it to posts.js 
-//api key for news a0df15a1f3f446a29928319d9ceac5ab
+import React from 'react';
+import CardMedia from '@mui/material/CardMedia';
+import {faker} from '@faker-js/faker';
+const imageUrl = faker.image.animals()
+export default function GetPosts(){
+    
+
+ return (  
+    <CardMedia
+    component="img"
+    height="140"
+    image={imageUrl}
+    alt="green iguana"
+  />)
+}
