@@ -1,50 +1,36 @@
 import React from "react";
-
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { IconButton } from "@mui/material";
-import MessageIcon from '@mui/icons-material/Message';
+import MessageIcon from "@mui/icons-material/Message";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
+import Skeleton from "@mui/material/Skeleton";
+import { faker } from '@faker-js/faker';
 
 export default class GetStories extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { avatar: [], personName: [], personCity: [] };
+    this.state = {loading: true };
   }
 
   componentDidMount() {
-    fetch("https://randomuser.me/api/")
-      .then((res) => res.json())
-      .then(({ results }) =>
-        this.setState({
-          avatar: results,
-          personName: results,
-          personCity: results,
-        })
-      );
+    this.setState({loading: false})
   }
 
   render() {
+    const { loading } = this.state;
+    const picUrl = faker.image.avatar();
+    const userFirstName = faker.name.firstName();
+    const userCity = faker.address.city();
     
-    var picUrl = this.state.avatar.map(
-      (item, i) => (picUrl = item.picture.large)
-    );
 
-    
-    var userFirstName = this.state.personName.map(
-      (item, i) => (userFirstName = item.name.first + " " + item.name.last)
-    );
-
-   
-    var userCity = this.state.personCity.map(
-      (item, i) => (userCity = item.location.city)
-    );
-
-    return (
+    return loading ? (
+      <Skeleton height={90} />
+    ) : (
       <Card
         sx={{
           display: "flex",
@@ -54,18 +40,23 @@ export default class GetStories extends React.Component {
           backdropFilter: "blur(5px)",
         }}
       >
-         <CardMedia
-            component="img"
-            maxheight="80"
-            minheight="80"
-            sx={{width: 80}}
-            image={picUrl}
-            alt=""
-           
-          />
-        <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent:"space-between", flex: 'auto'}}>
-         
-          <CardContent >
+        <CardMedia
+          component="img"
+          maxheight="80"
+          minheight="80"
+          sx={{ width: 80 }}
+          image={picUrl}
+          alt=""
+        />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            flex: "auto",
+          }}
+        >
+          <CardContent>
             <Typography gutterBottom variant="h8" component="div">
               {userFirstName}
             </Typography>
@@ -73,11 +64,15 @@ export default class GetStories extends React.Component {
               {userCity}
             </Typography>
           </CardContent>
-            <CardActions >
-            <IconButton variant="outlined" size="small" sx={{ justifyContent:"Right" }}>
-                <MessageIcon />
-                 </IconButton>
-            </CardActions>
+          <CardActions>
+            <IconButton
+              variant="outlined"
+              size="small"
+              sx={{ justifyContent: "Right" }}
+            >
+              <MessageIcon />
+            </IconButton>
+          </CardActions>
         </Box>
       </Card>
     );

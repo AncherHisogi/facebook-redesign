@@ -48,11 +48,18 @@ export default function FriendsLayout() {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider',  backgroundColor: 'rgba(255, 255, 255, .50)',
-            backdropFilter: 'blur(5px)'}}>
+      <Box
+        sx={{
+          borderBottom: 1,
+          borderColor: "divider",
+          backgroundColor: "rgba(255, 255, 255, .50)",
+          backdropFilter: "blur(5px)",
+        }}
+      >
         <Tabs
           value={value}
-          onChange={handleChange}npm
+          onChange={handleChange}
+          npm
           aria-label="basic tabs example"
         >
           <Tab label="Allfriends" {...a11yProps(0)} />
